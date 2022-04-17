@@ -289,6 +289,72 @@
         }); <br>
     </p>
 
+    <h2>API et requête</h2>
 
+    <h3>JSON</h3>
+    <p>
+        JSON signifie JavaScript Object Notation <br>
+        JV object : <br>
+        const obj = { <br>
+            name: "Mon contenu", <br>
+            id: 1234, <br>
+            message: "Voici mon contenu", <br>
+            author: { <br>
+                name: "John" <br>
+            }, <br>
+            comments: [ <br>
+                { <br>
+                    id: 45, <br>
+                    message: "Commentaire 1" <br>
+                }, <br>
+                { <br>
+                    id: 46, <br>
+                    message: "Commentaire 2" <br>
+                } <br>
+            ] <br>
+        }; <br>
+
+        In JSON  : <br>
+        { <br>
+            "name": "Mon contenu", <br>
+            "id": 1234, <br>
+            "message": "Voici mon contenu", <br>
+            "author": { <br>
+                "name": "John" <br>
+            }, <br>
+            "comments": [ <br>
+                { <br>
+                    "id": 45, <br>
+                    "message": "Commentaire 1" <br>
+                }, <br>
+                { <br>
+                    id: 46, <br>
+                    "message": "Commentaire 2" <br>
+                } <br>
+            ] <br>
+        } <br>
+        En JavaScript, votre objet est assigné à une variable, alors qu'en JSON on ne fait que décrire une structure. <br>
+
+        Appel : <br>
+        fetch("http://url-service-web.com/api/users"); <br>
+        Si simple écho : <br>
+        fetch(“https://mockbin.com/request”) <br>
+        .then(function(res) { <br>
+            if (res.ok) { <br>
+            return res.json(); <br>
+            } <br>
+        }) <br>
+        .then(function(value) { <br>
+            console.log(value); <br>
+        }) <br>
+        .catch(function(err) { <br>
+            // Une erreur est survenue br
+        }); <br>
+        Vous pouvez voir dans l'exemple ci-dessus que l'URL passée à la fonctionfetch() a changé et correspond à l’URL de notre service web. Le type de requête est GET (ce qui est le cas par défaut avec Fetch) 
+        car nous voulons récupérer les données. <br>
+
+        Ensuite nous appelons la fonctionthen()pour récupérer le résultat de la requête au format json en ayant vérifié au préalable que la requête s’était bien passée avec res.ok. 
+        Ce résultat json étant lui aussi une Promise, nous le retournons et récupérons sa vraie valeur dans la fonction then() suivante. <br>
+    </p>
 </body>
 </html>
