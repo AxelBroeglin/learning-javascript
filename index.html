@@ -350,10 +350,12 @@
         .catch(function(err) { <br>
             // Une erreur est survenue br
         }); <br>
-        Vous pouvez voir dans l'exemple ci-dessus que l'URL passée à la fonctionfetch() a changé et correspond à l’URL de notre service web. Le type de requête est GET (ce qui est le cas par défaut avec Fetch) 
+        Vous pouvez voir dans l'exemple ci-dessus que l'URL passée à la fonctionfetch() a changé et correspond à l’URL de notre service web. <br>
+        Le type de requête est GET (ce qui est le cas par défaut avec Fetch) <br>
         car nous voulons récupérer les données. <br>
 
-        Ensuite nous appelons la fonctionthen()pour récupérer le résultat de la requête au format json en ayant vérifié au préalable que la requête s’était bien passée avec res.ok. 
+        Ensuite nous appelons la fonctionthen()pour récupérer le résultat de la requête au format json <br>
+        en ayant vérifié au préalable que la requête s’était bien passée avec res.ok. <br>
         Ce résultat json étant lui aussi une Promise, nous le retournons et récupérons sa vraie valeur dans la fonction then() suivante. <br>
     </p>
 </body>
