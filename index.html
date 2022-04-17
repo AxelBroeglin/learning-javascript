@@ -260,5 +260,35 @@
     elementAvecMessage.innerHTML = "Message de l'élément intérieur"; <br>
     });
     </p>
+
+    <h3>Track the mouse</h3>
+    <p>
+        clientX  /  clientY  : position de la souris dans les coordonnées locales (contenu du DOM) ; <br>
+
+        offsetX  /  offsetY  : position de la souris par rapport à l'élément sur lequel on écoute l'événement ; <br>
+    
+        pageX  /  pageY  : position de la souris par rapport au document entier ; <br>
+    
+        screenX  /  screenY  : position de la souris par rapport à la fenêtre du navigateur ; <br>
+    
+        movementX  /  movementY  : position de la souris par rapport à la position de la souris lors du dernier événement  mousemove <br>
+        Exemmple : <br>
+        elt.addEventListener('mousemove', function(event) { <br>
+            const x = event.offsetX; // Coordonnée X de la souris dans l'élément <br>
+            const y = event.offsetY; // Coordonnée Y de la souris dans l'élément <br>
+        });
+    </p>
+
+    <h3>Track changes in text</h3>
+    <p>
+        Change : event is triggered when the area looses the focus. Works with < input>, < select> et < textarea>. And checkbox and radio. <br>
+        Input : same but when text is changed, even if user is not done. <br>
+        Exemple : <br>
+        input.addEventListener('input', function(event) { <br>
+            output.innerHTML = event.target.value; <br>
+        }); <br>
+    </p>
+
+
 </body>
 </html>
