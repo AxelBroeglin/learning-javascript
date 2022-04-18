@@ -383,5 +383,50 @@
             return /^e[0-9]{3,}$/.test(value); <br>
         } <br>
     </p>
+
+    <h3>With HTML 5</h3>
+    <p>
+        Pour valider les informations saisies dans une balise input, il est possible d'utiliser l'attribut type . <br>
+        On peut aussi utiliser les Regex gâce à Pattern, exemple : <br>
+        < input type="text" pattern="[0-9]{,3}" /> <br>
+    </p>
+
+    <p> Questionnaire :
+        HTTP est un protocole permettant de communiquer avec des services web. Il signifie HyperText Transfer Protocol. <br>
+        C'est  Fetch qui permet de faire des requêtes HTTP vers un service web en JavaScript. <br>
+        JSON signifie : JavaScript Object Notation. Il s'agit d'un format textuel très simple et peu verbeux, que JavaScript comprend très facilement car il est proche de sa syntaxe objet (d'où son nom). <br>
+        JSON.parse(value)  permet bien de transformer du texte JSON en un objet JavaScript. <br>
+        JSON.stringify(value) va transformer un objet JavaScript passé en paramètre en un texte au format JSON. <br>
+        Il s'agit de la 2e réponse. En effet, la fonction  json()  permet de transformer du contenu JSON en objet JavaScript. Mais elle ne retourne pas directement l’objet, elle retourne une Promise, qui devra être résolue. <br>
+        Pour forcer le champ à être une adresse e-mail, il faut que son  type  soit  email  .
+Pour obliger l'utilisateur à entrer une valeur dans ce champ, il faut lui ajouter l'attribut  required  . <br>
+Faites bien attention au fait que la fonction JSON.stringify transforme notre objet JavaScript en JSON, et que le JSON n’est rien d’autre que du texte. Dans notre exemple, la réponse 4 n’est pas valide car {foo: “bar”} est du JavaScript et non du JSON. <br>
+
+    </p>
+
+    <h2>Even Loop</h2>
+
+    <p>Allows you to do asynchronous stuff, even in the synchronous language that JS is.</p>
+
+    <h3>setTimeout</h3>
+    <p>
+        The most common one, takes the function then the delay. <br>
+        setTimeout(function() { <br>
+            console.log("I'm here!") <br>
+        }, 5000); <br>
+        
+        console.log("Where are you?"); <br>
+    </p>
+
+    <h3>Other methods</h3>
+    <p>
+        - setInterval, same as setTimeout but with an interval, function every x seconds. clearInterval to stop <br>
+        - setImmediate .will put function in the event loop but before any other. <br>
+    </p>
+
+    <h3>I/O, or Input Output</h3>
+    <p>
+        Writing/reading files, HTTP requests etc. Fetch for instance.
+    </p>
 </body>
 </html>
