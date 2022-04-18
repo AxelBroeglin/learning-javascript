@@ -360,5 +360,28 @@
         en ayant vérifié au préalable que la requête s’était bien passée avec res.ok. <br>
         Ce résultat json étant lui aussi une Promise, nous le retournons et récupérons sa vraie valeur dans la fonction then() suivante. <br>
     </p>
+
+    <h2>How to check user's input</h2>
+    
+    <h3>With Events</h3>
+    <p>onChange or onIput you check validity after user is done or after each character. <br>
+    Exemple, to check that it begins with Hello : <br>
+    myInput.addEventListener('input', function(e) { <br>
+        var value = e.target.value; <br>
+        if (value.startsWith('Hello ')) { <br>
+            isValid = true; <br>
+        } else { <br>
+            isValid = false; <br>
+        } <br>
+    }); <br>
+    </p>
+
+    <h3>With Regex</h3>
+    <p>
+        To see if text matches the rules, exemple : <br>
+        function isValid(value) { <br>
+            return /^e[0-9]{3,}$/.test(value); <br>
+        } <br>
+    </p>
 </body>
 </html>
