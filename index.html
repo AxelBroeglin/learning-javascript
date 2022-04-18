@@ -438,5 +438,19 @@ Faites bien attention au fait que la fonction JSON.stringify transforme notre ob
     <p>
         https://youtu.be/h33Srr5J9nY
     </p>
+
+    <h3>questionnaire</h3>
+    <p>
+        Le JavaScript est un langage synchrone et mono-thread. L'asynchrone se fait grâce à l'event loop en envoyant des fonctions dans sa file d'attente. <br>
+        On peut voir l'event loop comme étant un tunnel mono-thread dans lequel on va mettre en file d'attente des fonctions pour décaler leur exécution. <br>
+        setTimeout  sert à retarder l'exécution d'une fonction du temps indiqué. Il va ajouter la fonction passée en paramètre à l'event loop, et demander à attendre un certain temps avant de l'exécuter. Si aucun temps n’est passé à la fonction (comme dans notre exemple), alors notre callback sera exécutée au prochain tour de l’event loop, et donc après Deuz  . <br>
+        La différence est subtile : une callback est une fonction (appelons-la  cb ) que l'on passe en paramètre à une autre fonction (appelons-la  fn ). C'est  fn  qui va exécuter  cb  lorsqu'elle aura fini ce qu'elle doit faire. <br>
+        Un objet JavaScript dédié aux traitements asynchrones <br>
+        45 <br>
+        “Salut toi” <br>
+        setInterval  permet d'exécuter une fonction de callback toutes les X ms. La fonction prend le délai en millisecondes et non en secondes. <br>
+        promiseRes  vaut une promesse résolue avec l'identifiant de la fonction  setTimeout  , et la callback est appelée après 24 secondes <br>
+        
+    </p>
 </body>
 </html>
